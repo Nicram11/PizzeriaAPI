@@ -4,8 +4,9 @@ namespace Domain.Entities
 {
     public class ApplicationUser : IdentityUser
     {
-        /*public string FirstName { get; set; }
-        public string LastName { get; set; }*/
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
+       public virtual ICollection<Employee> Employees{ get; set; }
         public virtual ICollection<Order> Orders { get; set; }
     }
 }
