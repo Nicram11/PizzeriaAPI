@@ -8,7 +8,6 @@
         public string PhoneNumber { get; set; }
 
 
-
         public virtual ICollection<Pizza> Pizzas { get; set; }
         public virtual ICollection<Order> Orders { get; set; }
         public virtual ICollection<DeliveryProvider> RestaurantDeliveryProviders { get; set; }

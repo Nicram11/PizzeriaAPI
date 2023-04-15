@@ -1,4 +1,9 @@
-﻿namespace Domain.Entities
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Runtime.CompilerServices;
+
+namespace Domain.Entities
 {
     public class Pizza
     {
@@ -10,6 +15,7 @@
         public int RestaurantId { get; set; }
         public virtual Restaurant Restaurant { get; set; } 
         public virtual ICollection<Ingredient> Ingredients { get; set; }
-        public virtual ICollection<Order> Orders { get; set; }
+        
+        public virtual ICollection<OrderPizza> OrderPizzas { get; set; }
     }
 }
