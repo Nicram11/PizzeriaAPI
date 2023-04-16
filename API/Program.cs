@@ -1,10 +1,12 @@
 using Application.Security.Commands;
 using Application.Security.Interfaces;
+using Application.Security.Interfaces.Repositories;
 using Application.Security.Queries;
 using Application.Security.Services;
 using Domain.Entities;
 using Infrastructure.Configuration;
 using Infrastructure.Data;
+using Infrastructure.Repositories;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Hosting;
@@ -54,6 +56,9 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<RestaurantDbContext>();
 
 builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
+
+builder.Services.AddScoped<IRestaurantRepository, RestaurantRepository>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
