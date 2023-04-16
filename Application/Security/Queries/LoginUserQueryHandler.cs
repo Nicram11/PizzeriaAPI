@@ -1,6 +1,5 @@
 ﻿using Application.Security.DTOs;
 using Application.Security.Interfaces;
-using Application.Security.Queries;
 using Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
@@ -10,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Security.Handlers
+namespace Application.Security.Queries
 {
     public class LoginUserQueryHandler : IRequestHandler<LoginUserQuery, LoginUserResult>
     {

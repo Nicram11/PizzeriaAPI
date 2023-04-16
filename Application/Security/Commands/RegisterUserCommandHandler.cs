@@ -1,9 +1,8 @@
-﻿using Application.Security.Commands;
-using Domain.Entities;
+﻿using Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 
-namespace Application.Security.Handlers
+namespace Application.Security.Commands
 {
     public class RegisterUserCommandHandler : IRequestHandler<RegisterUserCommand, IdentityResult>
     {

@@ -1,5 +1,4 @@
-﻿using Application.Security.Queries;
-using Domain.Entities;
+﻿using Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using System;
@@ -8,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Security.Handlers
+namespace Application.Security.Queries
 {
-    public class GetCurrentUserQueryHandler :IRequestHandler<GetCurrentUserQuery, ApplicationUser>
+    public class GetCurrentUserQueryHandler : IRequestHandler<GetCurrentUserQuery, ApplicationUser>
     {
         private readonly UserManager<ApplicationUser> _userManager;
 
